@@ -1,4 +1,6 @@
-abstract class Car {
+// Description:  This code demonstrates the four fundamental principles of Object-Oriented Programming (OOP) in JAVA: Encapsulation, Inheritance, Polymorphism, and Abstraction. It defines a base class `Car` with common attributes and methods, and two derived classes `ManualCar` and `ElectricCar` that inherit from `Car` and implement specific behaviors. The code also showcases both runtime polymorphism (using abstract methods) and static polymorphism (using function overloading). Finally, it abstracts the complexity of car operations through simple method calls in the `main` function.
+
+abstract class Car { //--------------------------------------------> Encapsulation
     String brand;
     String model;
     int year;
@@ -28,12 +30,12 @@ abstract class Car {
         System.out.println(brand + " " + model + " Current speed: " + speed + " km/h");
     }
 
-    abstract void accelerate();
+    abstract void accelerate(); // ------------------------------>(Runtime Polymorphism)
     abstract void brake();
 }
 
 
-class ManualCar extends Car {
+class ManualCar extends Car {  // -------------------------------------------> Inheritance
     int gear;
     float fuelCapacity;
 
@@ -191,7 +193,7 @@ public class oops_01 {
         ManualCar myCar1 = new ManualCar("Toyota", "Corolla", 2020);
         ElectricCar myCar2 = new ElectricCar("Tesla", "Model 3", 2022);
 
-        // Abstraction
+        //----------------------------------------------------> Abstraction
         myCar1.startEngine();
         myCar1.accelerate();
         myCar1.accelerate(20);

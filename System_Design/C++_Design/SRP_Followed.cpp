@@ -1,3 +1,5 @@
+// Description: This code demonstrates the Single Responsibility Principle (SRP) being followed in a shopping cart system. The ShoppingCart class is responsible for managing products and calculating totals. While there is separate class for printing Invoice and Saving to Database which make sure that each class handles only single main function.
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -73,6 +75,6 @@ int main(){
     printer->printInvoice(cart);
     DataBaseStorage* dbStorage = new DataBaseStorage();
     dbStorage->saveToDatabase(cart);
-    
+
     return 0;
 }

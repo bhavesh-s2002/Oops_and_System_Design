@@ -1,3 +1,5 @@
+// Description: This code demonstrates a violation of the Single Responsibility Principle (SRP) in a shopping cart system. The ShoppingCart class is responsible for managing products, calculating totals, and also has methods for printing invoices and saving to a database, which should ideally be handled by separate classes.
+
 #include <bits/stdc++.h>
 using namespace std;
 
